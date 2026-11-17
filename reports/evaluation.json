@@ -1,0 +1,180 @@
+{
+  "created_utc": "2026-11-17T16:04:12.395668+00:00",
+  "seed": 42,
+  "rank": 32,
+  "hardware": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "logical_cpus": 8
+  },
+  "training_seconds": 0.25459339999360964,
+  "source": {
+    "url": "https://archive.ics.uci.edu/static/public/352/online+retail.zip",
+    "archive_sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+    "rows_read": 541909,
+    "retained_purchase_lines": 353825,
+    "license": "CC BY 4.0",
+    "citation": "Chen, D. (2015). Online Retail. UCI. DOI:10.24432/C5BW33",
+    "demographic_features_used": false
+  },
+  "train_before": "2011-09-01",
+  "validation_before": "2011-10-15",
+  "rows": {
+    "train": 200138,
+    "validation": 56716,
+    "test": 96971
+  },
+  "training_users": 3295,
+  "training_items": 2552,
+  "protocol": "Global time split; frozen train-only catalog/history. Macro user recall/NDCG@10 on future distinct products not bought in train. Cold catalog targets remain in denominator; repeated training purchases excluded. No validation tuning.",
+  "validation": {
+    "methods": {
+      "popularity": {
+        "all": {
+          "users": 1630,
+          "recall_at_10": 0.02413786602254958,
+          "ndcg_at_10": 0.056017036531608444
+        },
+        "warm_user": {
+          "users": 1161,
+          "recall_at_10": 0.01891207987021361,
+          "ndcg_at_10": 0.03994289272015653
+        },
+        "cold_user": {
+          "users": 469,
+          "recall_at_10": 0.037074193789846076,
+          "ndcg_at_10": 0.0958082539411941
+        },
+        "catalog_coverage": 0.023510971786833857,
+        "head_item_share": 1.0,
+        "latency_ms_p50": 3.1114500015974045,
+        "latency_ms_p95": 7.1064649673644436
+      },
+      "content": {
+        "all": {
+          "users": 1630,
+          "recall_at_10": 0.044213836000404065,
+          "ndcg_at_10": 0.08474919648900153
+        },
+        "warm_user": {
+          "users": 1161,
+          "recall_at_10": 0.04709798087271389,
+          "ndcg_at_10": 0.08028175639849482
+        },
+        "cold_user": {
+          "users": 469,
+          "recall_at_10": 0.037074193789846076,
+          "ndcg_at_10": 0.0958082539411941
+        },
+        "catalog_coverage": 0.5246865203761756,
+        "head_item_share": 0.6390184049079755,
+        "latency_ms_p50": 4.185400001006201,
+        "latency_ms_p95": 8.305039993138053
+      },
+      "collaborative": {
+        "all": {
+          "users": 1630,
+          "recall_at_10": 0.02912682584501151,
+          "ndcg_at_10": 0.056398650617581494
+        },
+        "warm_user": {
+          "users": 1161,
+          "recall_at_10": 0.02591639038753743,
+          "ndcg_at_10": 0.040478664434313354
+        },
+        "cold_user": {
+          "users": 469,
+          "recall_at_10": 0.037074193789846076,
+          "ndcg_at_10": 0.0958082539411941
+        },
+        "catalog_coverage": 0.6884796238244514,
+        "head_item_share": 0.46656441717791414,
+        "latency_ms_p50": 4.051900003105402,
+        "latency_ms_p95": 6.695564987603574
+      }
+    },
+    "target_users": 1630,
+    "unseen_target_pairs": 38358,
+    "cold_item_target_pairs": 3748
+  },
+  "test": {
+    "methods": {
+      "popularity": {
+        "all": {
+          "users": 2213,
+          "recall_at_10": 0.018039496198915865,
+          "ndcg_at_10": 0.04620621339257262
+        },
+        "warm_user": {
+          "users": 1480,
+          "recall_at_10": 0.015374177951840342,
+          "ndcg_at_10": 0.03760493837792395
+        },
+        "cold_user": {
+          "users": 733,
+          "recall_at_10": 0.02342103918073275,
+          "ndcg_at_10": 0.0635730442543462
+        },
+        "catalog_coverage": 0.02390282131661442,
+        "head_item_share": 1.0,
+        "latency_ms_p50": 3.964100033044815,
+        "latency_ms_p95": 7.175120012834669
+      },
+      "content": {
+        "all": {
+          "users": 2213,
+          "recall_at_10": 0.03396313008827336,
+          "ndcg_at_10": 0.06956507943626813
+        },
+        "warm_user": {
+          "users": 1480,
+          "recall_at_10": 0.039184314301264754,
+          "ndcg_at_10": 0.07253275632028756
+        },
+        "cold_user": {
+          "users": 733,
+          "recall_at_10": 0.02342103918073275,
+          "ndcg_at_10": 0.0635730442543462
+        },
+        "catalog_coverage": 0.582680250783699,
+        "head_item_share": 0.6562584726615455,
+        "latency_ms_p50": 4.455999995116144,
+        "latency_ms_p95": 7.626879983581603
+      },
+      "collaborative": {
+        "all": {
+          "users": 2213,
+          "recall_at_10": 0.022670882157092304,
+          "ndcg_at_10": 0.04684168602261395
+        },
+        "warm_user": {
+          "users": 1480,
+          "recall_at_10": 0.02229935168524876,
+          "ndcg_at_10": 0.03855514170919521
+        },
+        "cold_user": {
+          "users": 733,
+          "recall_at_10": 0.02342103918073275,
+          "ndcg_at_10": 0.0635730442543462
+        },
+        "catalog_coverage": 0.7280564263322884,
+        "head_item_share": 0.4924536827835517,
+        "latency_ms_p50": 4.007999959867448,
+        "latency_ms_p95": 7.148040016181768
+      }
+    },
+    "target_users": 2213,
+    "unseen_target_pairs": 64048,
+    "cold_item_target_pairs": 9550
+  },
+  "artifacts": {
+    "events.json": "e00c380918273c69f0be091b1ec34e6ff0710d84144598fb33d56024a25a2329",
+    "model.json": "a8d7b1a0db64841f2e87272c90d6ad9d7a24e3f6c84b587418ba71c970b583d9",
+    "model.npz": "0dffb8c8896381b5df917862625fd2e2f6a1ffe0e95cac6a8d9a4089f8d842dd"
+  },
+  "code": {
+    "prepare.py": "4cfd6894d63243a3980428c5d9a78b5bf9a5d75adc09da75eeca4434f465770a",
+    "recflow.py": "aaf3e4fada8a72e41e950c73d35e7252c95c8385c4657cc044ed4108cf7711e8",
+    "train.py": "66f88e41c66377006895bd934b93d1d2ab47077527bdbda017c9c287244ee30f"
+  }
+}
